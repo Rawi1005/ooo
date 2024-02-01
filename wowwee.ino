@@ -1,6 +1,6 @@
 int gas = 39;
 int led = 2;
-int limit = 2000;
+int limit = 3050;
 
 void setup() {
  Serial.begin(9600);
@@ -16,6 +16,9 @@ void loop() {
    if (db >= limit){
     Serial.println("OMG FIRE AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     analogWrite(led, HIGH);
+    delay(500);
+    analogWrite(led, LOW);
+    delay(500);
    }
 
    else{
